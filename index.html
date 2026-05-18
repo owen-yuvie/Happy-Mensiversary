@@ -1,0 +1,960 @@
+<DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>for dd ganteng 💌</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+
+background:
+linear-gradient(
+rgba(10,10,18,0.55),
+rgba(10,10,18,0.70)
+),
+url('bg.jpg') center/cover fixed;
+
+overflow-x:hidden;
+color:white;
+position:relative;
+}
+
+/* OPENING */
+
+#opening{
+position:fixed;
+inset:0;
+
+background:#0f0f15;
+
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+
+z-index:9999;
+
+transition:1.5s;
+}
+
+#opening h1{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+font-weight:400;
+letter-spacing:2px;
+opacity:0.9;
+}
+
+#opening p{
+margin-top:15px;
+opacity:0.5;
+font-size:0.9rem;
+}
+
+/* FLOWERS */
+
+.flowers{
+position:fixed;
+inset:0;
+
+overflow:hidden;
+pointer-events:none;
+
+z-index:-2;
+}
+
+.flower{
+position:absolute;
+top:-10%;
+
+animation:fall linear infinite;
+
+opacity:0.7;
+}
+
+@keyframes fall{
+
+0%{
+transform:translateY(-10vh) rotate(0deg);
+opacity:0;
+}
+
+20%{
+opacity:0.7;
+}
+
+100%{
+transform:translateY(110vh) rotate(360deg);
+opacity:0;
+}
+
+}
+
+/* HEARTS */
+
+.hearts{
+position:fixed;
+inset:0;
+
+pointer-events:none;
+overflow:hidden;
+
+z-index:-1;
+}
+
+.hearts::before,
+.hearts::after{
+content:'♡';
+
+position:absolute;
+
+font-size:18px;
+
+opacity:0.15;
+
+animation:heartFloat 12s linear infinite;
+}
+
+.hearts::before{
+left:15%;
+}
+
+.hearts::after{
+left:75%;
+animation-delay:6s;
+}
+
+@keyframes heartFloat{
+
+0%{
+transform:translateY(100vh);
+opacity:0;
+}
+
+20%{
+opacity:0.2;
+}
+
+100%{
+transform:translateY(-10vh);
+opacity:0;
+}
+
+}
+
+/* GLOW */
+
+body::before{
+content:'';
+
+position:fixed;
+inset:0;
+
+background:
+radial-gradient(circle at top left,
+rgba(255,192,220,0.18),
+transparent 30%),
+
+radial-gradient(circle at bottom right,
+rgba(172,198,255,0.14),
+transparent 30%);
+
+pointer-events:none;
+z-index:-1;
+}
+
+/* SECTION */
+
+section{
+min-height:100vh;
+
+padding:100px 20px;
+
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+}
+
+/* GLASS */
+
+.glass{
+width:100%;
+max-width:950px;
+
+background:rgba(255,255,255,0.08);
+
+border:1px solid rgba(255,255,255,0.15);
+
+backdrop-filter:blur(18px);
+-webkit-backdrop-filter:blur(18px);
+
+border-radius:35px;
+
+padding:35px;
+
+box-shadow:
+0 10px 40px rgba(0,0,0,0.18);
+
+transition:0.4s;
+}
+
+.glass:hover{
+box-shadow:
+0 0 40px rgba(255,192,220,0.18);
+}
+
+/* HERO */
+
+.hero-photo{
+width:180px;
+height:180px;
+
+border-radius:50%;
+object-fit:cover;
+
+border:4px solid rgba(255,255,255,0.5);
+
+margin-bottom:25px;
+}
+
+.hero-title{
+font-family:'Great Vibes',cursive;
+
+font-size:5rem;
+
+text-align:center;
+
+color:#ffd5e5;
+
+line-height:1.1;
+}
+
+.hero-text{
+margin-top:25px;
+
+line-height:2;
+text-align:center;
+
+opacity:0.92;
+}
+
+.poem{
+margin-top:35px;
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:1.5rem;
+
+line-height:1.8;
+
+text-align:center;
+
+color:#ffe8f1;
+}
+
+/* NOTIF */
+
+.fake-notif{
+width:100%;
+max-width:420px;
+
+background:rgba(255,255,255,0.10);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,0.15);
+
+border-radius:25px;
+
+padding:18px 20px;
+
+margin-bottom:35px;
+}
+
+.notif-top{
+display:flex;
+justify-content:space-between;
+
+font-size:0.8rem;
+opacity:0.7;
+
+margin-bottom:10px;
+}
+
+/* TITLES */
+
+.section-title{
+font-size:3rem;
+
+margin-bottom:35px;
+
+font-family:'Cormorant Garamond',serif;
+
+text-align:center;
+
+color:#ffd8e7;
+}
+
+/* QUOTE */
+
+.quote{
+margin:45px 0;
+
+text-align:center;
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:1.5rem;
+
+line-height:1.8;
+
+color:#ffe7f1;
+}
+
+/* MEMORY */
+
+.memory-card{
+margin-top:35px;
+
+background:rgba(255,255,255,0.08);
+
+border-radius:30px;
+
+overflow:hidden;
+
+border:1px solid rgba(255,255,255,0.12);
+
+position:relative;
+
+transition:0.4s;
+}
+
+.memory-card:hover{
+transform:translateY(-5px);
+box-shadow:
+0 0 40px rgba(255,192,220,0.18);
+}
+
+.memory-card img{
+width:100%;
+display:block;
+}
+
+.caption{
+padding:25px;
+
+text-align:center;
+
+line-height:2;
+}
+
+/* LETTER */
+
+.letter{
+line-height:2.5;
+}
+
+/* HOLD */
+
+.hold-box{
+margin-top:60px;
+text-align:center;
+}
+
+#secretHold{
+display:inline-block;
+
+padding:18px 35px;
+
+border-radius:999px;
+
+background:rgba(255,255,255,0.10);
+
+border:1px solid rgba(255,255,255,0.15);
+
+backdrop-filter:blur(12px);
+
+cursor:pointer;
+}
+
+#hiddenMessage{
+opacity:0;
+
+margin-top:25px;
+
+transition:0.5s;
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:1.5rem;
+
+color:#ffe8f1;
+}
+
+/* CLOCK */
+
+.clock-box{
+margin-top:40px;
+
+text-align:center;
+
+background:rgba(255,255,255,0.08);
+
+padding:30px;
+
+border-radius:30px;
+}
+
+.clock-box h1{
+font-size:3rem;
+margin:15px 0;
+
+color:#ffd6e5;
+}
+
+/* FINAL */
+
+.final{
+text-align:center;
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:2rem;
+
+line-height:2;
+}
+
+.end-screen{
+margin-top:70px;
+
+font-size:2rem;
+
+opacity:0.9;
+
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+
+0%{
+opacity:0.4;
+}
+
+50%{
+opacity:1;
+}
+
+100%{
+opacity:0.4;
+}
+
+}
+
+/* DOODLES */
+
+.doodle{
+position:absolute;
+
+font-family:'Great Vibes',cursive;
+
+font-size:2rem;
+
+opacity:0.12;
+
+pointer-events:none;
+}
+
+/* SPARK */
+
+.spark{
+position:fixed;
+
+pointer-events:none;
+
+animation:sparkle 1s forwards;
+}
+
+@keyframes sparkle{
+
+0%{
+transform:scale(0.5);
+opacity:1;
+}
+
+100%{
+transform:scale(2);
+opacity:0;
+}
+
+}
+
+/* FOOTER */
+
+.tiny-footer{
+padding:60px 20px;
+
+text-align:center;
+
+font-size:0.85rem;
+
+line-height:2;
+
+opacity:0.45;
+}
+
+/* SCROLL */
+
+.hidden{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero-title{
+font-size:3.7rem;
+}
+
+.section-title{
+font-size:2.3rem;
+}
+
+.poem,
+.quote,
+.final{
+font-size:1.3rem;
+}
+
+.glass{
+padding:25px;
+}
+
+.clock-box h1{
+font-size:2.2rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- OPENING -->
+
+<div id="opening">
+
+<h1>tap anywhere to begin 💌</h1>
+
+<p>made with love by kk cantik</p>
+
+</div>
+
+<!-- FLOWERS -->
+<div class="flowers" id="flowers"></div>
+
+<!-- HEARTS -->
+<div class="hearts"></div>
+
+<!-- DOODLES -->
+
+<div class="doodle"
+style="top:8%; right:8%;">
+mine ♡
+</div>
+
+<div class="doodle"
+style="bottom:18%; left:6%;">
+19 mei 💌
+</div>
+
+<!-- AUDIO -->
+
+<audio id="music" loop>
+<source src="sad.mp3" type="audio/mpeg">
+</audio>
+
+<!-- HERO -->
+
+<section>
+
+<div class="fake-notif hidden">
+
+<div class="notif-top">
+<span>1 new message</span>
+<span>now</span>
+</div>
+
+<div>
+<strong>kk cantik 💌</strong>
+<p>makasih udah hadir sejauh ini.</p>
+</div>
+
+</div>
+
+<div class="glass hidden">
+
+<div style="display:flex; justify-content:center;">
+<img src="hero.jpg" class="hero-photo">
+</div>
+
+<h1 class="hero-title">
+Happy<br>
+Mensiversary 
+</h1>
+
+<p class="hero-text">
+untuk dd ganteng kesayangan kk cantik...
+terima kasih karena sudah hadir dan bikin hidup aku terasa lebih hangat dari sebelumnya.
+</p>
+
+<div class="poem">
+“dan kalau dunia bertanya
+apa bentuk nyaman yang paling nyata,
+mungkin aku akan menyebut namamu.”
+</div>
+
+</div>
+
+</section>
+
+<!-- QUOTE -->
+
+<section>
+
+<div class="quote hidden">
+“some people arrive softly,<br>
+but somehow change everything.”
+</div>
+
+</section>
+
+<!-- MEMORY -->
+
+<section>
+
+<div class="glass hidden">
+
+<h1 class="section-title">
+our little universe 📸
+</h1>
+
+<div class="memory-card">
+
+<img src="foto1.jpg">
+
+<div class="caption">
+kadang aku masih heran...
+gimana seseorang bisa datang sesederhana ini,
+tapi jadi seberarti ini.
+</div>
+
+</div>
+
+<div class="quote">
+“aku suka cara semesta mempertemukan aku sama kamu.”
+</div>
+
+<div class="memory-card">
+
+<img src="chat1.jpg">
+
+<div class="caption">
+LUCU BANGAT CHATNYAA BIKIN NANGIS 😭💞💞
+</div>
+
+</div>
+
+<div class="quote">
+“hal kecil tentang kamu selalu berhasil aku ingat lebih lama.”
+</div>
+
+<div class="memory-card">
+
+<img src="chat2.jpg">
+
+<div class="caption">
+ini gemes bangef, soalnya first time dikasih beginian,, mamasyi lho yah, aku salting berat
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- LETTER -->
+
+<section>
+
+<div class="glass hidden">
+
+<h1 class="section-title">
+secret letter 💌
+</h1>
+
+<div class="letter">
+
+untuk dd ganteng aku...
+
+<br><br>
+
+aku nggak pernah nyangka kalau seseorang bisa hadir sesederhana ini,
+tapi ninggalin rasa yang sedalam ini.
+
+<br><br>
+
+kamu datang tanpa suara besar,
+tapi perlahan berhasil jadi tempat paling nyaman.
+
+<br><br>
+
+makasih karena udah sabar sama semua sisi aku.
+sisi yang berisik,
+sisi yang terlalu banyak mikir,
+dan sisi yang kadang capek sama dunia.
+
+<br><br>
+
+dan di tengah semua itu,
+kamu tetap tinggal.
+
+<br><br>
+
+mungkin aku nggak selalu pandai nunjukin rasa sayang.
+tapi percayalah...
+setiap hal kecil tentang kamu selalu punya tempat spesial di hati aku.
+
+<br><br>
+
+kalau suatu hari nanti dunia terasa terlalu berat,
+aku harap kamu inget kalau pernah ada seseorang
+yang sesayang ini sama kamu.
+
+</div>
+
+<div class="hold-box">
+
+<div id="secretHold">
+press & hold 💌
+</div>
+
+<p id="hiddenMessage">
+“aku harap kita bisa selamanya.”
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FINAL -->
+
+<section>
+
+<div class="final hidden">
+
+thank you for becoming one of the softest parts of my life.
+
+<div class="clock-box">
+
+<p>di jam segini...</p>
+
+<h1 id="clock"></h1>
+
+<span>aku masih sayang kamu <3</span>
+
+</div>
+
+<div class="end-screen">
+end of page,<br>
+not end of us.
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<div class="tiny-footer">
+made carefully with love,<br>
+tears,<br>
+and sleep deprivation.
+</div>
+
+<script>
+
+/* OPENING */
+
+const opening =
+document.getElementById('opening');
+
+const music =
+document.getElementById('music');
+
+opening.addEventListener('click',()=>{
+
+opening.style.opacity='0';
+
+setTimeout(()=>{
+
+opening.style.display='none';
+
+},1500);
+
+music.play();
+
+});
+
+/* FLOWERS */
+
+const flowers =
+document.getElementById('flowers');
+
+for(let i=0;i<25;i++){
+
+const flower =
+document.createElement('div');
+
+flower.classList.add('flower');
+
+flower.innerHTML='🌸';
+
+flower.style.left =
+Math.random()*100+'%';
+
+flower.style.animationDuration =
+8 + Math.random()*10 +'s';
+
+flower.style.fontSize =
+14 + Math.random()*18 +'px';
+
+flowers.appendChild(flower);
+
+}
+
+/* SCROLL */
+
+const hidden =
+document.querySelectorAll('.hidden');
+
+const observer =
+new IntersectionObserver((entries)=>{
+
+entries.forEach((entry)=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add('show');
+
+}
+
+});
+
+});
+
+hidden.forEach((el)=>observer.observe(el));
+
+/* CLOCK */
+
+function updateClock(){
+
+const now =
+new Date();
+
+const time =
+now.toLocaleTimeString('id-ID');
+
+document.getElementById('clock')
+.innerHTML = time;
+
+}
+
+setInterval(updateClock,1000);
+
+updateClock();
+
+/* HOLD */
+
+const hold =
+document.getElementById('secretHold');
+
+const hiddenMessage =
+document.getElementById('hiddenMessage');
+
+let timer;
+
+hold.addEventListener('touchstart',()=>{
+
+timer = setTimeout(()=>{
+
+hiddenMessage.style.opacity='1';
+
+},1000);
+
+});
+
+hold.addEventListener('touchend',()=>{
+
+clearTimeout(timer);
+
+});
+
+/* SPARK EFFECT */
+
+document.addEventListener('click',(e)=>{
+
+const spark =
+document.createElement('div');
+
+spark.classList.add('spark');
+
+spark.innerHTML='✨';
+
+spark.style.left =
+e.clientX + 'px';
+
+spark.style.top =
+e.clientY + 'px';
+
+document.body.appendChild(spark);
+
+setTimeout(()=>{
+
+spark.remove();
+
+},1000);
+
+});
+
+</script>
+
+</body>
+</html>
